@@ -1,2 +1,8 @@
-# web-dev-toy-projects
-A collection of small projects to learn HTML, CSS, and JavaScript.
+# Web Development Learning Projects
+
+This repository contains a collection of projects to learn and practice HTML, CSS, and JavaScript.
+
+## Projects
+
+1. [Landing Page](landing-page/README.md)
+   - A simple landing page to practice HTML and CSS.
