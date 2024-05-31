@@ -2,7 +2,9 @@
 
 ## Overview
 
-This project is a landing page created to practice HTML and CSS. 
+This project is a landing page created to practice HTML and CSS.
+ 
+[Live Preview](https://batoomer.github.io/web-dev-toy-projects/landing-page/index.html)
 
 ## Technologies Used
 
