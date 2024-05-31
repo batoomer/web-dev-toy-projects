@@ -12,5 +12,6 @@ This project is a landing page created to practice HTML and CSS.
 ## Learning Objectives
 
 - Understand the structure of an HTML document.
-- Use CSS to style HTML elements.
+- Use CSS to style the page.
+- Use flexbox to position the elements
 
