@@ -4,5 +4,5 @@ This repository contains a collection of projects to learn and practice HTML, CS
 
 ## Projects
 
-1. [Landing Page](landing-page/index.html)
+1. [Landing Page](landing-page/README.md)
    - A simple landing page to practice HTML and CSS.
