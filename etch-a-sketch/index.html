@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch A Sketch</title>
+</head>
+<body>
+    <header>
+        <h2>Options</h2>
+        <!-- Options Menu -->
+        <div id="#options-container">
+            <!--  Color Option  -->
+            <div class="option-wrapper">
+                <h3>Color</h3>
+                <input type="color" id="color-input">
+            </div>
+            <!--  Pain Option -->
+            <div class="option-wrapper">
+                <h3>Paint Mode</h3>
+                <button class="btn" id="paint-btn">Paint</button>
+                <button class="btn" id="erase-btn">Erase</button>
+                <button class="btn" id="rainbow-btn">Rainbow</button>
+            </div>
+            <!--  Borders Option  -->
+            <div class="option-wrapper">
+                <h3>Borders</h3>
+                <button class="btn btn-active" id="border-btn">Toogle Border</button>
+            </div>
+            <!--  Size Option  -->
+            <div class="option-wrapper">
+                <h3>Grid Size</h3>
+                <input type="range" id="size-range" min="10", max="100", value="15">
+                <small>15x15</small>
+            </div>
+            <!--  Clear Option -->
+            <div class="option-wrapper">
+                <h3>Clear</h3>
+                <button class="btn" id="clear-btn">Clear</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Etch A Sketch</h1>
+        <div class="grid-container grid-border">
+            <!-- Children are generated with JS and have a class of "grid-item"-->
+            <!-- <div class="grid-item"></div>  -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Developed by Batouchan Omer, 2024</p>
+    </footer>
+</body>
+</html>
