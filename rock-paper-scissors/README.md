@@ -9,8 +9,11 @@ to compete against the computer.
 
 - JavaScript
 - HTML
+- CSS
 
 ## Learning Objectives
 
 - Practice JavaScript fundamentals
 - Develop simple game logic
+- DOM Manipulations and events
+- Apply CSS for styling and layout.

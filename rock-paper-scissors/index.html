@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
     
+    <main>
+        
+        
+        <div class="scoreboard">
+            <h2>Scoreboard</h2>
+            <div>
+                <p>Player: <span id="player-score">0</span></p>
+                <p>Computer: <span id="computer-score">0</span></p>
+            </div>
+        </div>
+
+        <div class="gameboard">
+            <div>
+                <img src="assets/icons/question.png" alt="">
+                <p>vs</p>
+                <img src="assets/icons/question.png" alt="">
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <button id="rock" class="game-btn" type="button">
+                <img src="assets/icons/rock.png" alt="">
+                <p>Rock</p>
+            </button>
+            <button id="paper" class="game-btn" type="button">
+                <img src="assets/icons/paper.png" alt="">
+                <p>Paper</p>
+            </button>
+            <button id="scissors" class="game-btn" type="button">
+                <img src="assets/icons/scissors.png" alt="">
+                <p>Scissors</p>
+            </button>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2024 Batouchan Omer</p>
+    </footer>
 </body>
 </html>
