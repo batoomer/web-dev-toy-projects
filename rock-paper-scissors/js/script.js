@@ -1,8 +1,15 @@
 // Mapping of integers to choices
 const CHOICE_MAPPING = {
-    0 : 'paper',
+    0 : "paper",
     1 : "rock",
     2 : "scissors"
+};
+
+// Mapping of choices to icon paths
+const PATH_MAPPING = {
+    "paper" : "assets/icons/paper.png",
+    "rock" : "assets/icons/rock.png",
+    "scissors" : "assets/icons/scissors.png",
 };
 
 // Constants representing the choices
@@ -28,19 +35,6 @@ function getComputerChoice(){
     return CHOICE_MAPPING[KEY]
 };
 
-// Gets the choice of the player
-function getPlayerChoice(){
-    // Get an input from the player and check if it is valid.
-    // If the input is invalid, alert the user and get a new input until a valid one is entered.
-    let playerChoice = prompt("Choose your weapon:");
-    while (!Object.values(CHOICE_MAPPING).includes(playerChoice)){
-        alert(`Not a correct weapon: ${playerChoice}. Try again.`)
-        playerChoice = prompt("Choose your weapon:");
-    }
-
-    return playerChoice
-};
-
 // Checks if the player wins and returns True
 function doesPlayerWin(playerChoice, computerChoice){
     return (
@@ -50,29 +44,53 @@ function doesPlayerWin(playerChoice, computerChoice){
     );
 }
 
-// Plays a single round of the game
+// Updates the player choice and the computer choice images
+function setChoiceImages(playerChoice, computerChoice){
+    document.querySelector("#player-icon").src = PATH_MAPPING[playerChoice];
+    document.querySelector("#computer-icon").src = PATH_MAPPING[computerChoice];
+};
+
+// Increments the player score and updates the UI
+function incrementPlayerScore(){
+    playerScore++;
+    document.querySelector("#player-score").textContent = `${playerScore}`;
+}
+
+// Increments the computer score and updates the UI
+function incrementComputerScore(){
+    computerScore++;
+    document.querySelector("#computer-score").textContent = `${computerScore}`;
+}
+
+
+// Plays a single round of the game and updates the ui
 function playRound(playerChoice, computerChoice){
     if (playerChoice === computerChoice){
-        return "It's a tie";
+        document.querySelector("#game-status").textContent = 'It is a tie!';
     } else if (doesPlayerWin(playerChoice, computerChoice)){
-        playerScore++;
-        return "Player wins";
+        incrementPlayerScore();
+        document.querySelector("#game-status").textContent = "Player wins!";
     } else {
-        computerScore++;
-        return "Computer wins";
+        incrementComputerScore();
+        document.querySelector("#game-status").textContent = "Computer wins!";
     }
 };
 
-// Plays the game for 5 rounds
-function playGame(){
-    let status = ''
-    for(i=0; i<5; i++){
-        const p1 = getPlayerChoice()
-        const p2 = getComputerChoice()
-        console.log(`Player: ${p1} vs Computer: ${p2}`)
-        status = playRound(p1, p2);
-        console.log(`${status}. Player: ${playerScore} | Computer: ${computerScore}`)
+
+// Add event listeners to all buttons for playing the game
+document.querySelectorAll('button').forEach(
+    btn => {
+        btn.addEventListener(
+            'click', () => {
+                // Get the player's choice from the button's ID
+                let playerChoice = btn.id;
+                // Generate the computer's choice
+                let computerChoice = getComputerChoice();
+                // Update the choice image
+                setChoiceImages(playerChoice, computerChoice);
+                // Play a round and update the game
+                playRound(playerChoice, computerChoice);
+            }
+        );
     }
-}
- 
-playGame()
+);

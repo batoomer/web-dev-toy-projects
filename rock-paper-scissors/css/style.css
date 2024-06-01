@@ -73,6 +73,15 @@ main {
     text-shadow: 1px 1px 0 black;
 }
 
+.gameboard {
+    text-align: center;
+}
+
+#game-status{
+    font-size: 1.1rem;
+    color:greenyellow;
+}
+
 .gameboard > div{
     display: flex;
     align-items: center;
@@ -112,11 +121,9 @@ main {
     font-size: 1.1rem;
     cursor: pointer;
     transition: transform ease 0.1s;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     border: 2px solid rgb(4, 4, 57);
     border-radius: 2rem;
     padding: 0.5rem;
