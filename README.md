@@ -9,3 +9,6 @@ This repository contains a collection of projects to learn and practice HTML, CS
 
 2. [Rock Paper Scissors](rock-paper-scissors/README.md)
    - A Rock Paper Scissors game used to practice JavaScript, HTML and CSS
+
+3. [Etch A Sketch](etch-a-sketch/README.md)
+   - A web-based version of the classic drawing toy.
