@@ -2,6 +2,8 @@
 
 ## Overview
 
+[Live Preview]([Live Preview](https://batoomer.github.io/web-dev-toy-projects/rock-paper-scissors/index.html))
+
 This project is a simple Rock Paper Scissors game implemented in JavaScript. It allows players
 to compete against the computer.
 
