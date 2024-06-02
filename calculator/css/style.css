@@ -24,6 +24,8 @@ body {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     width: 320px;
     padding: 25px;
+    z-index: 1;
+    position: relative;
 }
 
 /* Calculator Screen */
@@ -123,30 +125,30 @@ body {
 
 
 header{
-    position: relative;
     margin-top: 2.5vh;
     font-size: 1.5rem;
-    text-decoration: underline wavy black;
 }
 
-header::after{
+#calculator::after{
     content: "y=ax+b";
-    font-size: 2.5rem;
-    color: #0d0d0d5b;
+    font-size: 10rem;
+    color: #0d0d0d20;
     position: absolute;
-    left: -155px;
-    bottom: -120px;
+    left: 500px;
+    top: 400px;
     transform: rotate(-17deg);
+    z-index: 0;
 }
 
-header::before{
+#calculator::before{
     content: "z=a+ib";
-    font-size: 2.5rem;
-    color: #0d0d0d5b;
+    font-size: 10rem;
+    color: #0d0d0d20;
     position: absolute;
-    right: -155px;
-    bottom: 15px;
-    transform: rotate(17deg);
+    right: 500px;
+    bottom: 400px;
+    transform: rotate(-17deg);
+    z-index: 0;
 }
 
 footer{
