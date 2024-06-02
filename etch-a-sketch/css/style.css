@@ -73,10 +73,6 @@ input[type='color']{
     border-radius: 1rem;
 }
 
-.btn:hover {
-    background-color: rgb(3, 44, 148);
-}
-
 .option-wrapper .btn:nth-child(3) {
     margin: 0 0.5rem;
 }
@@ -97,10 +93,11 @@ main {
     justify-content: center;
 }
 
-.grid-container{
+#grid-container{
     width: 35rem;
     height: 35rem;
     background-color: white;
+    cursor: crosshair;
 }
 
 
