@@ -15,3 +15,6 @@ This repository contains a collection of projects to learn and practice HTML, CS
 
 4. [Calculator](calculator/README.md)
    - A web-based classical calculator
+
+5. [Sign Up Form](sign-up-form/README.md)
+   - A web-based classical calculator
