@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="banner">
+        <div id="banner-logo">
+            <img src="assets/icons/logo.svg" alt="Captain Quant's Summit Logo">
+            <h1>Summit 2024</h1>
+        </div>
+    </header>
+    <main id="main">
+        <!-- Information section -->
+        <section id="information-section">
+            <h2>Captain Quant's Summit</h2>
+            <p>
+                Join us at Captain Quant's Summit 2024, where industry leaders and tech enthusiasts converge to explore 
+                the latest advancements in technology. From groundbreaking AI innovations to cutting-edge quantum computing, 
+                this summit offers a unique opportunity to learn, network, and inspire. 
+            </p>
+            <p>Register today and be part of this extraordinary event!</p>
+        </section>
+
+        <!-- Form Section -->
+        <section id="form-section">
+            <form id="sign-up-form" action="/submit" method="POST">
+                <h2>Sign Up</h2>
+                <p>Fields marked with an asterisk (<strong><span class="asterisk">*</span></strong>) are mandatory.</p>
+            
+                <!-- Personal Information Section -->
+                <section id="form-personal-info">
+                    <h3>Personal Information</h3>
+                    <!-- First Name -->
+                    <div class="input-wrapper">
+                        <label for="firstname"><strong><span class="asterisk">*</span></strong>Firstname</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="John" required>
+                    </div>
+                    <!-- Last Name -->
+                    <div class="input-wrapper">
+                        <label for="lastname"><strong><span class="asterisk">*</span></strong> Lastname</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Miller">
+                    </div>
+                    <!-- Email -->
+                    <div class="input-wrapper">
+                        <label for="email"><strong><span class="asterisk">*</span></strong> Email</label>
+                        <input type="email" name="email" id="email" placeholder="John.miller@gmail.com" required>
+                    </div>
+                    <!-- Password -->
+                    <div class="input-wrapper">
+                        <label for="password"><strong><span class="asterisk">*</span></strong> Password</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <!-- Confirm Password -->
+                    <div class="input-wrapper">
+                        <label for="confirm-password"><strong><span class="asterisk">*</span></strong> Confirm Password</label>
+                        <input type="password" name="confirm-password" id="confirm-password" required>
+                    </div>
+                </section>
+            
+                <!-- Conference Details Section -->
+                <section id="form-conference-details">
+                    <h3>Conference Details</h3>
+                    <!-- Attendance Type -->
+                    <fieldset id="conference-attendance">
+                        <legend><strong><span class="asterisk">*</span></strong> Attendance Type</legend>
+                        <div class="input-wrapper">
+                            <input type="radio" id="in-person" name="attendance" value="in-person" checked required>
+                            <label for="in-person">In-Person</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="radio" id="virtual" name="attendance" value="virtual">
+                            <label for="virtual">Virtual</label>
+                        </div>
+                    </fieldset>
+                    <!-- Workshops -->
+                    <fieldset id="conference-workshop">
+                        <legend>Workshops</legend>
+                        <div class="input-wrapper">
+                            <input type="checkbox" name="workshops" id="ai-workshop" value="ai">
+                            <label for="ai-workshop">Artificial Intelligence</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="checkbox" name="workshops" id="cyber-workshop" value="cybersecurity">
+                            <label for="cyber-workshop">Cybersecurity</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="checkbox" name="workshops" id="web-workshop" value="webdev">
+                            <label for="web-workshop">Web Development</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="checkbox" name="workshops" id="quantum-workshop" value="quantum">
+                            <label for="quantum-workshop">Quantum Computing</label>
+                        </div>
+                    </fieldset>
+                    <!-- T-shirt Size -->
+                    <fieldset id="conference-tshirt">
+                        <legend><strong><span class="asterisk">*</span></strong> T-shirt Size</legend>
+                        <div class="input-wrapper">
+                            <label for="tshirt-size">T-Shirt Size:</label>
+                            <select id="tshirt-size" name="tshirt-size" required>
+                                <option value="">Select Size</option>
+                                <option value="s">S</option>
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                                <option value="xxl">XXL</option>
+                            </select>
+                        </div>  
+                    </fieldset>
+                </section>
+            
+                <!-- Submit Section -->
+                <section id="form-submit">
+                    <div class="input-wrapper">
+                        <button type="submit">Sign Up</button>
+                    </div>
+                </section>
+            </form>            
+        </section>
+
+        <footer>
+            <p>Already have any account? <span>Log in</span></p>
+        </footer>
+
+    </main>
+</body>
+</html>
