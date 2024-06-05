@@ -1,0 +1,184 @@
+/* CSS RESET */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+/* General Style */
+
+:root{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    --background: #F8F4E1;
+    --background-lg : #F0EBD8;
+    --text-color: #74512D;
+    --text-color-1: #f5f5f5;
+    --accent-color-1: #AF8F6F;
+    --accent-color-2: #543310;
+    --accent-color-3: #D9B996;
+    --border-color: #483c323e;
+
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header, main, footer {
+    padding: 0 7.5vw;
+}
+
+main {
+    flex: 1;
+}
+
+
+/* HEADER STYLE and FOOTER STYLE */
+
+footer {
+    height: 25px;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+header {
+    background-color: var(--accent-color-1);
+    color: var(--accent-color-2);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+header h1 {
+    font-size: 2.75rem;
+}
+
+header h1 > img {
+    display: inline-block;
+    height: 75px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 0.75rem;
+}
+
+.add-button{
+    font-size: 40px;
+    display: block;
+    background-color: var(--accent-color-2);
+    color: var(--text-color-1);
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color ease 0.5s;
+}
+
+.add-button:hover{
+    background-color: var(--accent-color-3);
+    color: var(--text-color)
+}
+
+/* MAIN STYLE */
+
+.table-wrapper{
+    /* Total Height - Header Height - Footer Height - footer top margin - header bottom margin*/
+    max-height: calc(100vh - 100px - 25px - 5rem);
+    overflow: auto;
+    text-wrap: nowrap;
+    scrollbar-color: var(--accent-color-2) var(--accent-color-1);
+}
+
+#library-table { 
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#library-table th {
+    background-color: var(--accent-color-3);
+    color: var(--accent-color-2);
+    font-size: 1.15rem;
+    position: sticky;
+    top: 0;
+}
+
+#library-table th, td {
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+
+#library-table input[type="checkbox"]{
+    accent-color: var(--accent-color-2);
+}
+
+.remove-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 3.5px;
+}
+
+.remove-button svg {
+    width: 1.5rem;
+    height: auto;
+    display: block;
+}
+
+.remove-button:hover svg path {
+    fill: var(--accent-color-1); 
+    transition: fill ease 0.5s;
+}
+
+.remove-button svg > g{
+    fill: var(--accent-color-2);
+}
+
+
+
+#library-table thead tr {
+    position: relative;
+    z-index: 2;
+}
+
+#library-table tbody tr{
+    position: relative;
+    z-index: 1;
+}
+
+.sticky-col {
+    background-color: var(--background);
+    position: sticky;
+    z-index: 2;
+    text-align: center;
+}
+
+.sticky-col.sticky-right{
+    right: 0;
+    z-index: 3;
+    
+}
+
+.sticky-col.sticky-left{
+    left: 0;
+}
+
+#library-table tbody tr:nth-child(even) {
+    background-color: var(--background-lg);
+}
+
+tr:nth-child(even) .sticky-col{
+    background-color: var(--background-lg);
+}
