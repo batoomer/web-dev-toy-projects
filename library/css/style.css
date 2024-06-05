@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
 
 /* General Style */
@@ -20,10 +19,13 @@
     --accent-color-2: #543310;
     --accent-color-3: #D9B996;
     --border-color: #483c323e;
+    --success-color: #4CAF50; 
+    --error-color: #D32F2F;
 
 }
 
 body{
+    position: relative;
     min-height: 100vh;
     background-color: var(--background);
     color: var(--text-color);
@@ -121,6 +123,8 @@ header h1 > img {
 
 #library-table input[type="checkbox"]{
     accent-color: var(--accent-color-2);
+    width: 1rem;
+    height: 1rem;
 }
 
 .remove-button {
@@ -138,7 +142,7 @@ header h1 > img {
 }
 
 .remove-button:hover svg path {
-    fill: var(--accent-color-1); 
+    fill: var(--error-color); 
     transition: fill ease 0.5s;
 }
 
@@ -181,4 +185,110 @@ header h1 > img {
 
 tr:nth-child(even) .sticky-col{
     background-color: var(--background-lg);
+}
+
+/* Dialog Style */
+#add-book-dialog {
+    background-color: var(--background);
+    width: min(450px, 100%);
+    padding: 1.5rem 3rem;
+    border-radius: 10px;
+    border: 3px solid var(--border-color);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#add-book-dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#add-book-form h2 {
+    font-size: 2rem;
+    color: var(--accent-color-2);
+    text-align: left;
+    text-decoration: underline;
+    margin-bottom: 1.5rem;
+}
+
+#add-book-form .input-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+#add-book-form .input-wrapper label {
+    display: block;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.input-wrapper input[type="text"],
+.input-wrapper input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid var(--accent-color-2);
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.input-wrapper input[type="text"]:focus,
+.input-wrapper input[type="number"]:focus{
+    outline-color: var(--accent-color-3);
+}
+
+.input-wrapper input[type="text"]:valid,
+.input-wrapper input[type="number"]:valid{
+    outline-color: var(--success-color);
+}
+
+.input-wrapper input[type="text"]:invalid,
+.input-wrapper input[type="number"]:invalid{
+    outline-color: var(--error-color);
+}
+
+.input-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+#add-book-form .button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+#add-book-form button[type="submit"]{
+    width: 45%;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--text-color-1);
+    transition: filter ease 0.1s;
+}
+
+#add-book-form button[type="submit"]:hover {
+    filter: brightness(80%);
+}
+
+#add-book-form input[type="checkbox"]{
+    accent-color: var(--accent-color-2);
+    width: 20px; 
+    height: 20px;
+    margin-top: 0.5rem;
+    margin-left: 0.6rem;
+}
+
+#add-book-form #close-book-dialog {
+    background-color: var(--error-color);
+}
+
+#add-book-form #add-book-dialog-btn {
+    background-color: var(--success-color);
+
 }

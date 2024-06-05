@@ -5,60 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
+    <!-- Header Content -->
+    <header>
+        <h1><img src="assets/book-icon.svg" alt="Library Logo">Library</h1>
+        <menu id="control-menu">
+            <button class="add-button">+</button>
+        </menu>
+    </header>
 
-<header>
-    <h1><img src="assets/book-icon.svg" alt="Library Logo">Library</h1>
-    <menu id="control-menu">
-        <button class="add-button">+</button>
-    </menu>
-</header>
-
-
-<main>
-    <div class="table-wrapper">
-        <table id="library-table">
-            <thead>
-                <tr>
-                    <th class="sticky-col sticky-left">Index</th>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Pages</th>
-                    <th>Read</th>
-                    <th class="sticky-col sticky-right">Action</th>
-                </tr>
-            </thead>
-            <tbody id="library-entries">
-                <tr>
-                    <td class="sticky-col sticky-left">1</td>
-                    <td>Lorem ipsum.</td>
-                    <td>Yuval Noah Harari</td>
-                    <td>512</td>
-                    <td>
-                        <input type="checkbox" id="read1">
-                        <label style="display: none;" for="read1">Read</label>
-                    </td>
-                    <td class="sticky-col sticky-right">
-                        <button class="remove-button"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="50px" height="50px">
-                            <g fill="#f5f5f5" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                                <g transform="scale(5.12,5.12)">
-                                    <path d="M21,2c-1.64545,0 -3,1.35455 -3,3v2h-10c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h1v36c0,1.654 1.346,3 3,3h26c1.654,0 3,-1.346 3,-3v-36h1c0.36064,0.0051 0.69608,-0.18438 0.87789,-0.49587c0.18181,-0.3115 0.18181,-0.69676 0,-1.00825c-0.18181,-0.3115 -0.51725,-0.50097 -0.87789,-0.49587h-10v-2c0,-1.64545 -1.35455,-3 -3,-3zM21,4h8c0.55455,0 1,0.44545 1,1v2h-10v-2c0,-0.55455 0.44545,-1 1,-1zM19,14c0.552,0 1,0.448 1,1v25c0,0.553 -0.448,1 -1,1c-0.552,0 -1,-0.447 -1,-1v-25c0,-0.552 0.448,-1 1,-1zM25,14c0.552,0 1,0.448 1,1v25c0,0.553 -0.448,1 -1,1c-0.552,0 -1,-0.447 -1,-1v-25c0,-0.552 0.448,-1 1,-1zM31,14c0.553,0 1,0.448 1,1v25c0,0.553 -0.447,1 -1,1c-0.553,0 -1,-0.447 -1,-1v-25c0,-0.552 0.447,-1 1,-1z"></path>
+    <!-- Main Content -->
+    <main>
+        <div class="table-wrapper">
+            <table id="library-table">
+                <thead>
+                    <tr>
+                        <th class="sticky-col sticky-left">Index</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Read</th>
+                        <th class="sticky-col sticky-right">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="library-entries">
+                    <!-- Entries are added dynamically. Following the an example of the structure -->
+                    <!--
+                        <tr>
+                            <td class="sticky-col sticky-left">1</td>
+                            <td>Lorem ipsum.</td>
+                            <td>Yuval Noah Harari</td>
+                            <td>512</td>
+                            <td>
+                                <input type="checkbox" id="read1">
+                                <label style="display: none;" for="read1">Read</label>
+                            </td>
+                            <td class="sticky-col sticky-right">
+                                <button class="remove-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="50px" height="50px">
+                                        <g fill="#f5f5f5" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                            <g transform="scale(5.12,5.12)">
+                                                <path d="M21,2c-1.64545,0 -3,1.35455 -3,3v2h-10c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h1v36c0,1.654 1.346,3 3,3h26c1.654,0 3,-1.346 3,-3v-36h1c0.36064,0.0051 0.69608,-0.18438 0.87789,-0.49587c0.18181,-0.3115 0.18181,-0.69676 0,-1.00825c-0.18181,-0.3115 -0.51725,-0.50097 -0.87789,-0.49587h-10v-2c0,-1.64545 -1.35455,-3 -3,-3zM21,4h8c0.55455,0 1,0.44545 1,1v2h-10v-2c0,-0.55455 0.44545,-1 1,-1zM19,14c0.552,0 1,0.448 1,1v25c0,0.553 -0.448,1 -1,1c-0.552,0 -1,-0.447 -1,-1v-25c0,-0.552 0.448,-1 1,-1zM25,14c0.552,0 1,0.448 1,1v25c0,0.553 -0.448,1 -1,1c-0.552,0 -1,-0.447 -1,-1v-25c0,-0.552 0.448,-1 1,-1zM31,14c0.553,0 1,0.448 1,1v25c0,0.553 -0.447,1 -1,1c-0.553,0 -1,-0.447 -1,-1v-25c0,-0.552 0.447,-1 1,-1z"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>  
+                    -->
+                    <tr>
+                        <td class="sticky-col sticky-left">1</td>
+                        <td>Lorem ipsum.</td>
+                        <td>Yuval Noah Harari</td>
+                        <td>512</td>
+                        <td>
+                            <input type="checkbox" id="read1">
+                            <label style="display: none;" for="read1">Read</label>
+                        </td>
+                        <td class="sticky-col sticky-right">
+                            <button class="remove-button"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="50px" height="50px">
+                                <g fill="#f5f5f5" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(5.12,5.12)">
+                                        <path d="M21,2c-1.64545,0 -3,1.35455 -3,3v2h-10c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h1v36c0,1.654 1.346,3 3,3h26c1.654,0 3,-1.346 3,-3v-36h1c0.36064,0.0051 0.69608,-0.18438 0.87789,-0.49587c0.18181,-0.3115 0.18181,-0.69676 0,-1.00825c-0.18181,-0.3115 -0.51725,-0.50097 -0.87789,-0.49587h-10v-2c0,-1.64545 -1.35455,-3 -3,-3zM21,4h8c0.55455,0 1,0.44545 1,1v2h-10v-2c0,-0.55455 0.44545,-1 1,-1zM19,14c0.552,0 1,0.448 1,1v25c0,0.553 -0.448,1 -1,1c-0.552,0 -1,-0.447 -1,-1v-25c0,-0.552 0.448,-1 1,-1zM25,14c0.552,0 1,0.448 1,1v25c0,0.553 -0.448,1 -1,1c-0.552,0 -1,-0.447 -1,-1v-25c0,-0.552 0.448,-1 1,-1zM31,14c0.553,0 1,0.448 1,1v25c0,0.553 -0.447,1 -1,1c-0.553,0 -1,-0.447 -1,-1v-25c0,-0.552 0.447,-1 1,-1z"></path>
+                                    </g>
                                 </g>
-                            </g>
-                        </svg></button>
-                    </td>
-                </tr>  
-            </tbody>
-        </table> 
-    </div>
+                            </svg></button>
+                        </td>
+                    </tr>  
+                </tbody>
+            </table> 
+        </div>
 
 
-</main>
+    </main>
 
-<footer>
-    <p>&copy; 2024 Batouchan Omer</p>
-</footer>
+    <!-- Footer Content -->
+    <footer>
+        <p>&copy; 2024 Batouchan Omer</p>
+    </footer>
+
+    <!-- Add Book Dialog Modal -->
+    <dialog id="add-book-dialog">
+        <form method="dialog" id="add-book-form">
+            <h2>Add Book</h2>
+    
+            <div class="input-wrapper">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" required>
+            </div>
+    
+            <div class="input-wrapper">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" required>
+            </div>
+    
+            <div class="input-row">
+                <div class="input-wrapper">
+                    <label for="pages">Pages</label>
+                    <input type="number" name="pages" id="pages" required>
+                </div>
+    
+                <div class="input-wrapper">
+                    <label for="read">Read</label>
+                    <input type="checkbox" id="read" name="read">
+                </div>
+            </div>
+    
+            <div class="button-wrapper">
+                <button type="submit" id="add-book-dialog-btn">Add Book</button>
+                <button type="submit" formnovalidate id="close-book-dialog">Close</button>
+            </div>
+        </form>
+    </dialog>
+    
+    
+    
 
 </body>
 </html>
