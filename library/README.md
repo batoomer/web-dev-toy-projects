@@ -17,4 +17,5 @@ This project is as a library tracker, designed to practice, HTML table creation 
 - HTML Tables and Styling
 - Dialog and modals
 - HTML Forms and validation with JS
-- JavaScript Objects and Prototypes
+- JavaScript Classes
+- Event Delegation, where we attach an event listener to the parent element rather than each individual child element
