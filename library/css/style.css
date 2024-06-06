@@ -261,7 +261,8 @@ tr:nth-child(even) .sticky-col{
     margin-top: 1rem;
 }
 
-#add-book-form button[type="submit"]{
+#add-book-form button[type="submit"],
+#add-book-form button[type="button"]{
     width: 45%;
     padding: 12px 24px;
     border: none;
@@ -272,7 +273,8 @@ tr:nth-child(even) .sticky-col{
     transition: filter ease 0.1s;
 }
 
-#add-book-form button[type="submit"]:hover {
+#add-book-form button[type="submit"]:hover,
+#add-book-form button[type="button"]:hover {
     filter: brightness(80%);
 }
 

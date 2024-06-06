@@ -15,6 +15,6 @@ This project is as a library tracker, designed to practice, HTML table creation 
 ## Learning Objectives
 
 - HTML Tables and Styling
-- Dialgos and modals
+- Dialog and modals
 - HTML Forms and validation with JS
 - JavaScript Objects and Prototypes
