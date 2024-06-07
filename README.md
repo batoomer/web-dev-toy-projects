@@ -18,3 +18,6 @@ This repository contains a collection of projects to learn and practice HTML, CS
 
 5. [Sign Up Form](sign-up-form/README.md)
    - A simple Sign Up page to practice HTML Forms and form validation
+
+6. [Library](library/README.md)
+   - A simple Library to practice prototypes and ES6 classes.
