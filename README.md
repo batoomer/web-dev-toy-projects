@@ -24,3 +24,6 @@ This repository contains a collection of projects to learn and practice HTML, CS
 
 7. [Tic Tac Toe](tic-tac-toe/README.md)
    - A Tic Tac Toe game to practice factory functions and module patterns.
+
+8. [Weather App](weather-app/README.md)
+   - A simple weather application to practice API's, fetch api and async code.
