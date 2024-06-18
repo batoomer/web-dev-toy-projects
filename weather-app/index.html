@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myWeather</title>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!--  Main Header  -->
+        <header class="main-header">
+            <section class="header-intro">
+                <h1>myWeather</h1>
+                <p>Your lovely weather companion</p>
+            </section>
+            <section class="search-bar">
+                <input type="text" name="city-input" id="city-input" placeholder="Enter city name">
+                <button class="btn">Search</button>
+            </section>
+        </header>
+        <!--  Main Content  -->
+        <main class="main-content">
+            <!--  Current Weather Card  -->
+            <article class="current-weather-card">
+                <!--  Card Header  -->
+                <header>
+                    <p>right now</p>
+                    <p>
+                        &#9788;&uarr;: <span id="sunrise"> 6:00 AM</span> / 
+                        &#9788;&darr;:<span id="sunset"> 8:00 PM</span>
+                    </p>
+                </header>
+                <!--  Card Main  -->
+                <main>
+                    <section class="current-weather">
+                        <h2 id="city-name">Komotini, Greece</h2>
+                        <p id="current-temperature">25°C, Sunny</p>
+                        <img id="current-weather-icon" src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="Weather Icon">  
+                    </section>
+                    <section class="weather-alerts">
+                        <h2>Weather Alerts</h2>
+                        <img src="./icons/alert-icon.svg" alt="Weather Alert Icon" width="64px" height="64px">
+                    </section>
+                </main>
+                <!--  Card Footer  -->
+                <footer>
+                    <section class="current-weather-details">
+                        <div class="detail-container">
+                            <img src="./icons/wind-speed-icon.svg" alt="Wind Speed Icon" width="64px" height="64px">
+                            <p id="current-wind-speed">15 km/h</p>
+                        </div>
+                        <div class="detail-container">
+                            <img src="./icons/humidity-icon.svg" alt="Humidity Icon" width="64px" height="64px">
+                            <p id="current-humidity">60%</p>
+                        </div>
+                        <div class="detail-container">
+                            <img src="./icons/uv-index-icon.svg" alt="UV Index Icon" width="64px" height="64px">
+                            <p id="current-uv-index">5</p>
+                        </div>
+                    </section>
+                </footer>
+            </article>
+            <!-- Forecast Section -->
+            <section class="forecast">
+                <h2 class="forecast-title">Daily Forecast</h2>
+                 <div class="card-container">
+                    <!-- Today -->
+                    <article class="forecast-card">
+                        <header>
+                            <h2>Today</h2>
+                        </header>
+                        <main>
+                            <p>23°C, Cloudy</p>
+                            <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather Icon">
+                        </main>
+                        <footer>
+                            <div class="detail-container">
+                                <img src="./icons/wind-speed-icon.svg" alt="Wind Speed Icon" width="64px" height="64px">
+                                <p id="current-wind-speed">10 km/h</p>
+                            </div>
+                            <div class="detail-container">
+                                <img src="./icons/humidity-icon.svg" alt="Humidity Icon" width="64px" height="64px">
+                                <p id="current-humidity">65%</p>
+                            </div>
+                        </footer>
+                    </article>
+                    <!-- Tommorow -->
+                    <article class="forecast-card">
+                        <header>
+                            <h2>Tommorow</h2>
+                        </header>
+                        <main>
+                            <p>20°C, Rainy</p>
+                            <img src="https://cdn.weatherapi.com/weather/64x64/day/296.png" alt="Weather Icon">
+                        </main>
+                        <footer>
+                            <div class="detail-container">
+                                <img src="./icons/wind-speed-icon.svg" alt="Wind Speed Icon" width="64px" height="64px">
+                                <p id="current-wind-speed">10 km/h</p>
+                            </div>
+                            <div class="detail-container">
+                                <img src="./icons/humidity-icon.svg" alt="Humidity Icon" width="64px" height="64px">
+                                <p id="current-humidity">65%</p>
+                            </div>
+                        </footer>
+                    </article>
+                    <!-- Overmorrow -->
+                    <article class="forecast-card">
+                        <header>
+                            <h2>Overmorrow</h2>
+                        </header>
+                        <main>
+                            <p>22°C, Sunny</p>
+                            <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="Weather Icon">
+                        </main>
+                        <footer>
+                            <div class="detail-container">
+                                <img src="./icons/wind-speed-icon.svg" alt="Wind Speed Icon" width="64px" height="64px">
+                                <p id="current-wind-speed">10 km/h</p>
+                            </div>
+                            <div class="detail-container">
+                                <img src="./icons/humidity-icon.svg" alt="Humidity Icon" width="64px" height="64px">
+                                <p id="current-humidity">65%</p>
+                            </div>
+                        </footer>
+                    </article>
+                 </div>
+            </section>
+        </main>
+        <!--  Main Footer  -->
+        <footer class="main-footer">
+            <p>Copyright © 2024 myWeather. All rights reserved.</p>
+        </footer>
+
+    </div>
+    
+</body>
+</html>
