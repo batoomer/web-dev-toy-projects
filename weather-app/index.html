@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myWeather</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <div class="content-wrapper">
@@ -71,37 +72,37 @@
                             <h2>Today</h2>
                         </header>
                         <main>
-                            <p>23°C, Cloudy</p>
-                            <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather Icon">
+                            <p id="today-temperature">23°C, Cloudy</p>
+                            <img id="today-weather-icon" src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather Icon">
                         </main>
                         <footer>
                             <div class="detail-container">
-                                <img src="./icons/wind-speed-icon.svg" alt="Wind Speed Icon" width="64px" height="64px">
-                                <p id="current-wind-speed">10 km/h</p>
+                                <img src="./icons/uv-index-icon.svg" alt="Wind Speed Icon" width="64px" height="64px">
+                                <p id="today-uv">5</p>
                             </div>
                             <div class="detail-container">
                                 <img src="./icons/humidity-icon.svg" alt="Humidity Icon" width="64px" height="64px">
-                                <p id="current-humidity">65%</p>
+                                <p id="today-humidity">65%</p>
                             </div>
                         </footer>
                     </article>
-                    <!-- Tommorow -->
+                    <!-- Tomorrow -->
                     <article class="forecast-card">
                         <header>
-                            <h2>Tommorow</h2>
+                            <h2>Tomorrow</h2>
                         </header>
                         <main>
-                            <p>20°C, Rainy</p>
-                            <img src="https://cdn.weatherapi.com/weather/64x64/day/296.png" alt="Weather Icon">
+                            <p id="tomorrow-temperature">20°C, Rainy</p>
+                            <img id="tomorrow-weather-icon" src="https://cdn.weatherapi.com/weather/64x64/day/296.png" alt="Weather Icon">
                         </main>
                         <footer>
                             <div class="detail-container">
-                                <img src="./icons/wind-speed-icon.svg" alt="Wind Speed Icon" width="64px" height="64px">
-                                <p id="current-wind-speed">10 km/h</p>
+                                <img src="./icons/uv-index-icon.svg" alt="Wind Speed Icon" width="64px" height="64px">
+                                <p id="tomorrow-uv">5</p>
                             </div>
                             <div class="detail-container">
                                 <img src="./icons/humidity-icon.svg" alt="Humidity Icon" width="64px" height="64px">
-                                <p id="current-humidity">65%</p>
+                                <p id="tomorrow-humidity">65%</p>
                             </div>
                         </footer>
                     </article>
@@ -111,17 +112,17 @@
                             <h2>Overmorrow</h2>
                         </header>
                         <main>
-                            <p>22°C, Sunny</p>
-                            <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="Weather Icon">
+                            <p id="overmorrow-temperature">22°C, Sunny</p>
+                            <img id="overmorrow-weather-icon" src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="Weather Icon">
                         </main>
                         <footer>
                             <div class="detail-container">
-                                <img src="./icons/wind-speed-icon.svg" alt="Wind Speed Icon" width="64px" height="64px">
-                                <p id="current-wind-speed">10 km/h</p>
+                                <img src="./icons/uv-index-icon.svg" alt="Wind Speed Icon" width="64px" height="64px">
+                                <p id="overmorrow-uv">5</p>
                             </div>
                             <div class="detail-container">
                                 <img src="./icons/humidity-icon.svg" alt="Humidity Icon" width="64px" height="64px">
-                                <p id="current-humidity">65%</p>
+                                <p id="overmorrow-humidity">65%</p>
                             </div>
                         </footer>
                     </article>
