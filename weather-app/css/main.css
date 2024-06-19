@@ -111,7 +111,12 @@ body{
 }
 
 .weather-alerts h2 {
-    font-size: 1.25rem;
+    font-size: 1rem;
+}
+
+.weather-alerts img {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .weather-alerts {
@@ -128,7 +133,7 @@ body{
     font-size: 1.5rem;
 }
 
-.current-weather-card svg {
+.current-weather-card footer img {
     width: 3.25rem;
     height: 3.25rem;
 }
