@@ -1,0 +1,36 @@
+:root {
+    font-size: 16px; /* 600px to 1200px */
+    
+    --font-family-main: 'Montserrat', sans-serif;
+    
+    --color-primary: #2980B9;
+    --color-secondary: #6DD5FA;
+    --color-text: #fff;
+    --color-text-muted: rgba(255, 255, 255, 0.8);
+    
+    --background-gradient-primary: linear-gradient(135deg, #2980B9, #6DD5FA);
+    --background-gradient-secondary: linear-gradient(135deg, #2C3E50, #4CA1AF);
+    --background-overlay-light: rgba(255, 255, 255, 0.1);
+    --background-overlay-dark: rgba(255, 255, 255, 0.2);
+    
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+
+    --transition: 0.3s ease-in-out;
+}
+
+
+/* Small devices (600px and down) */
+@media (max-width: 600px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    :root {
+        font-size: 18px; /* Slightly larger for larger screens */
+    }
+}
